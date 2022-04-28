@@ -1,0 +1,50 @@
+.container {
+  height: 30px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  color: #fafafa;
+}
+
+.scrolling-text {
+  position: absolute;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+span,
+strong {
+  position: relative;
+  top: -10px;
+  margin-right: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.logo-home {
+  position: relative;
+  right: 5px;
+}
+
+.logo-away {
+  position: relative;
+  padding-right: 115px;
+}
+
+.score {
+  border-radius: 0.5em;
+  background-color: #1a2138;
+  padding: 3px;
+}
+
+/* Below doesn't work to pause */
+
+.scrolling-text:hover,
+.container:hover {
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
