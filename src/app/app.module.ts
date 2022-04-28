@@ -15,23 +15,35 @@ import { ScrollingTextComponent } from './scrolling-text/scrolling-text.componen
 import { HttpClientModule } from '@angular/common/http';
 import { TableVpgLiga1Component } from './table-vpg-liga1/table-vpg-liga1.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { TableLiga1Component } from './table-liga1/table-liga1.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ScrollingTextComponent,
-    TableVpgLiga1Component
+    TableVpgLiga1Component,
+    ToolbarComponent,
+    TableLiga1Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FlexLayoutModule,
+    CdkTableModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
     MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
     MatIconModule,
     MatDividerModule,
     MatCardModule

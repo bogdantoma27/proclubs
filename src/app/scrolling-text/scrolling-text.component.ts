@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 import { AppRepository } from '../core/repository/app.repository';
 
 @Component({
@@ -17,7 +18,9 @@ import { AppRepository } from '../core/repository/app.repository';
   ]
 })
 export class ScrollingTextComponent {
-
+  @ViewChild(MatSidenav)
+  sidenav!: MatSidenav;
+  hideContent: boolean = false;
   vpgResults;
 
   state = 0;
@@ -34,7 +37,7 @@ export class ScrollingTextComponent {
   latestResultsVpg() {
     this.repository.latestResultsVPG().subscribe(response => {
       this.vpgResults = response.data
-      console.log("VPG results: " + JSON.stringify(this.vpgResults))
+      // console.log("VPG results: " + JSON.stringify(this.vpgResults))
     })
   }
 }

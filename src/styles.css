@@ -1,10 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 
 .mat-drawer-backdrop.mat-drawer-shown {
     background-color: #f3f1f1;
     visibility: hidden;
+}
+
+.content {
+    height: calc(100vh - 99px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+    padding: 16px;
+    overflow: auto;
+}
+
+.mat-paginator-sticky {
+    bottom: 0px;
+    /* position: sticky; */
+    z-index: 10;
+    width: 100%;
+    height: fit-content;
+}
+
+.table {
+    width: 100%;
 }

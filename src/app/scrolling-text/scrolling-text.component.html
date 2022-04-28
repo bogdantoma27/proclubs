@@ -1,5 +1,7 @@
-<div class="container">
-    <div class="scrolling-text"  [@scroll]="state" (@scroll.done)="scrollDone()"><strong style="top:5px;margin-right: 35px;">VPG Premier results:</strong>
+<div class="container" style="    background: #004a9f;
+color: white;">
+    <div class="scrolling-text" [@scroll]="state" (@scroll.done)="scrollDone()"><strong
+            style="top:5px;margin-right: 35px;">VPG Premier results:</strong>
         <!-- Last results: <img style=
         "width: 15px;
         height: 20px;
@@ -12,11 +14,14 @@
         margin-left: 3px;" 
         src="https://secure.cache.images.core.optasports.com/soccer/teams/150x150/1651.png">Wisla Plock (Super League VPL)
      -->
-    <div *ngFor="let result of vpgResults; let i=index;">
-     <img class="logo-home" src="https://vpgassets.gumlet.io/{{result.home_logo}}?width=30&amp;height=30" width="30" height="30">
-     <strong>{{result.home_name}}</strong>
-     <span class="score">{{result.home_score}} - {{result.away_score}}</span>
-     <strong>{{result.away_name}}</strong>
-     <img class="logo-away" src="https://vpgassets.gumlet.io/{{result.away_logo}}?width=30&amp;height=30" width="30" height="30">
+        <div *ngFor="let result of vpgResults; let i=index;">
+            <img class="logo-home" src="https://vpgassets.gumlet.io/{{result.home_logo}}?width=30&amp;height=30"
+                width="30" height="30">
+            <strong>{{result.home_name}}</strong>
+            <span class="score">{{result.home_score}} - {{result.away_score}}</span>
+            <strong>{{result.away_name}}</strong>
+            <img class="logo-away" src="https://vpgassets.gumlet.io/{{result.away_logo}}?width=30&amp;height=30"
+                width="30" height="30">
+        </div>
     </div>
-    </div>
+</div>

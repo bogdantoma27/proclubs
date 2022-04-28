@@ -12,7 +12,6 @@
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
 }
 
 span,
@@ -48,3 +47,4 @@ strong {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
+

@@ -1,1 +1,53 @@
-<p>table-vpg-liga1 works!</p>
+
+
+<div class="content mat-elevation-z8" fxLayout="row wrap" fxFlexAlign="stretch">
+    
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table" matSort style="width:100%">
+
+        <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                {{column.header}}
+            </th>
+            <td mat-cell *matCellDef="let row; let i as index">
+                {{column.cell(row)}}
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: false"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+        <!-- <mat-paginator style="width:50%" class="mat-paginator-sticky" [pageSize]="16" [pageSizeOptions]="[5, 10, 15, 20, 25]"
+        showFirstLastButtons>
+    </mat-paginator> -->
+
+
+    <!-- right side of component -->
+
+    <!-- <div>
+        <table>
+            <thead>
+              <tr>
+                <th>ID
+                <th>First Name
+                <th>Last Name
+                <th>Goes By
+                <th>Gender
+                <th>Class
+                <th>Alive
+            </thead>
+            <tbody>
+                <tr *ngFor="let "class="disabled">
+                  <td>1
+                  <td>Malcolm
+                  <td>Reynolds
+                  <td>Mal, Cap'n
+                  <td>M
+                  <td>Captain
+                  <td>Yes
+                <tr>
+                </tbody>
+        </table>    
+    
+    </div> -->
+
+</div>

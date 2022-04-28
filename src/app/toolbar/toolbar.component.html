@@ -1,0 +1,47 @@
+
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+        <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+    </button>
+    <!-- billieJJ Pro Clubs -->
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+        <img class="avatar mat-elevation-z8"
+            src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.6435-9/65929230_2390396907722457_384672204631048192_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=174925&_nc_ohc=XRkEUCjzFdwAX_-J_8G&_nc_ht=scontent.fotp3-3.fna&oh=00_AT_slYbhXvxO-TWZP5M0uzo8_gm7bZklLM-MJ1z1kZBlDg&oe=628E5C9E" />
+
+        <h4 class="name">PSN: biiiieJJ | ST/CAM</h4>
+        <p class="designation">Current teams:</p>
+        <p class="designation">FC Arges Esports PS4</p>
+        <p class="designation">Orion Esports PS5</p>
+
+
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" routerLink="/home">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/profile">
+            <mat-icon>person</mat-icon>
+            <span>Profile (In-Work)</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/about">
+            <mat-icon>info</mat-icon>
+            <span>About (In-Work)</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" routerLink="/help">
+            <mat-icon>help</mat-icon>
+            <span>Help (In-Work)</span>
+        </button>
+    </mat-sidenav>
+    <mat-sidenav-content >
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
